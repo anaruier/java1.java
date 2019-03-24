@@ -1,0 +1,76 @@
+package qq;
+import java.util.Scanner;
+public class qq {
+	String userName;
+	String userID;
+	String password;
+	boolean online = false;
+	qq friend;
+	
+	qq(String userName,String userID,String password){
+		this.userID = userID;
+		this.userName = userName;
+		this.password = password;
+	}
+	
+	void postMessage() {
+		Message m = new Message(this.friend);
+	}
+
+}
+package qq;
+import java.util.Scanner;
+public class Message {
+	String content;
+	int time;
+	boolean success = false;
+	
+	Message(qq friend){
+		Scanner in = new Scanner(System.in);
+		System.out.println("请输入消息内容:");
+		content = in.nextLine();
+		if(friend.online)
+			System.out.println("给"+friend.userName+"发的消息"+content+",发送成功。");
+		else
+			System.out.println("好友"+friend.userName+"离线，无法发送消息。");
+	}
+	
+	void print() {
+		System.out.println("content:"+content);
+	}
+	void inputStu(boolean succe) {
+		success = succe;
+			
+			
+		
+	}
+
+}
+package qq;
+import java.util.Scanner;
+public class Message {
+	String content;
+	int time;
+	boolean success = false;
+	
+	Message(qq friend){
+		Scanner in = new Scanner(System.in);
+		System.out.println("请输入消息内容:");
+		content = in.nextLine();
+		if(friend.online)
+			System.out.println("给"+friend.userName+"发的消息"+content+",发送成功。");
+		else
+			System.out.println("好友"+friend.userName+"离线，无法发送消息。");
+	}
+	
+	void print() {
+		System.out.println("content:"+content);
+	}
+	void inputStu(boolean succe) {
+		success = succe;
+			
+			
+		
+	}
+
+}
